@@ -1,0 +1,387 @@
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Page Background */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    min-height: 100vh;
+    padding: 40px 15px;
+    transition: 0.4s;
+}
+
+/* Main Container */
+.container {
+    max-width: 700px;
+    margin: auto;
+}
+
+/* Portfolio Card */
+.profile-card {
+    background: white;
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.2);
+}
+
+/* Theme Button */
+#themeBtn {
+    display: block;
+    margin: 0 0 15px auto;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Profile */
+.profile-image {
+    width: 110px;
+    height: 110px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 35px;
+    font-weight: bold;
+    margin: 0 auto 20px;
+}
+
+.profile-card > h1,
+.profile-card > h3 {
+    text-align: center;
+}
+
+.profile-card h1 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.profile-card h3 {
+    color: #764ba2;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.intro {
+    text-align: center;
+    line-height: 1.7;
+    color: #666;
+}
+
+.status {
+    text-align: center;
+    background: #e4f8eb;
+    color: #168447;
+    padding: 10px;
+    border-radius: 20px;
+    margin: 20px auto;
+    width: fit-content;
+    font-size: 13px;
+}
+
+/* Sections */
+section {
+    margin-top: 30px;
+}
+
+section h2 {
+    color: #764ba2;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 8px;
+}
+
+section p {
+    color: #555;
+    line-height: 1.7;
+}
+
+/* Skills */
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skills span {
+    background: #eee9ff;
+    color: #6842a5;
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.skills span:hover {
+    background: #764ba2;
+    color: white;
+    transform: translateY(-4px);
+}
+
+/* Projects */
+.project {
+    background: #f6f4fc;
+    padding: 18px;
+    margin-bottom: 15px;
+    border-left: 4px solid #764ba2;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.project:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.project h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.project p {
+    margin-bottom: 10px;
+}
+
+.project small {
+    color: #764ba2;
+    font-weight: bold;
+}
+
+/* Contact */
+.contact {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.contact a {
+    background: #764ba2;
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.contact a:hover {
+    background: #4c2876;
+    transform: translateY(-3px);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 35px;
+    color: #888;
+    font-size: 13px;
+}
+
+/* Dark Theme */
+body.dark {
+    background: linear-gradient(135deg, #141e30, #243b55);
+}
+
+body.dark .profile-card {
+    background: #202938;
+}
+
+body.dark .profile-card h1,
+body.dark .project h3 {
+    color: white;
+}
+
+body.dark section p,
+body.dark .intro {
+    color: #ddd;
+}
+
+body.dark .project {
+    background: #303c4e;
+}
+
+body.dark section h2 {
+    border-color: #465267;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+
+    body {
+        padding: 20px 12px;
+    }
+
+    .profile-card {
+        padding: 22px;
+    }
+
+    .profile-card h1 {
+        font-size: 23px;
+    }
+
+    .profile-card h3 {
+        font-size: 14px;
+    }
+
+    .contact {
+        flex-direction: column;
+    }
+
+    .contact a {
+        text-align: center;
+    }
+}
+
+
+/* Responsive Design for Mobile, Tablet and Desktop */
+
+@media screen and (max-width: 768px) {
+
+    body {
+        padding: 20px 12px;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    .profile-card {
+        padding: 22px;
+    }
+
+    .profile-card h1 {
+        font-size: 23px;
+    }
+
+    .profile-card h3 {
+        font-size: 14px;
+    }
+
+    .skills {
+        gap: 8px;
+    }
+
+    .skills span {
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+
+    .contact {
+        flex-direction: column;
+    }
+
+    .contact a {
+        text-align: center;
+    }
+
+    .project {
+        padding: 14px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+    .profile-card {
+        padding: 16px;
+    }
+
+    .profile-card h1 {
+        font-size: 20px;
+    }
+
+    .profile-image {
+        width: 85px;
+        height: 85px;
+        font-size: 28px;
+    }
+
+    section h2 {
+        font-size: 18px;
+    }
+}
+
+
+/* Profile Initials */
+.profile-image {
+    width: 110px;
+    height: 110px;
+
+    background: linear-gradient(
+        135deg,
+        #667eea,
+        #764ba2
+    );
+
+    color: white;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 35px;
+    font-weight: bold;
+
+    margin: 0 auto 20px;
+
+    box-shadow: 0 5px 15px rgba(118, 75, 162, 0.3);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+
+    body {
+        padding: 20px 12px;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    .profile-card {
+        padding: 22px;
+    }
+
+    .profile-card h1 {
+        font-size: 23px;
+    }
+
+    .skills {
+        gap: 8px;
+    }
+
+    .contact {
+        flex-direction: column;
+    }
+
+    .contact a {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+    .profile-card {
+        padding: 16px;
+    }
+
+    .profile-card h1 {
+        font-size: 20px;
+    }
+
+    .profile-image {
+        width: 85px;
+        height: 85px;
+        font-size: 28px;
+    }
+}
+
